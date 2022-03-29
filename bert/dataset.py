@@ -63,15 +63,6 @@ class NERDataset(Dataset):
         label_sequence = label_sequence[:min(self.max_length - 2, len(label_sequence))]
         # convert string to ids
         tokenizer_output = self.tokenizer.encode(token_sequence)
-        #tokenizer_output = self.tokenizer.prepare_for_model(token_sequence)
-        #tokenizer_output = self.tokenizer.token_to_id(token_sequence)
-        #tokenizer_output = [self.tokenizer.token_to_id(token_str) for token_str in token]
-        #bert_tokens = [self.tokenizer.token_to_id(token_str) if self.tokenizer.token_to_id(token_str) is not None else self.tokenizer.token_to_id('[UNK]') for token_str in token_sequence]
-        #bert_tokens = [self.tokenizer.token_to_id('[CLS]')] + bert_tokens + [self.tokenizer.token_to_id('[SEP]')]
-        #label_sequence = [self.label_to_idx["O"]] + label_sequence + [self.label_to_idx["O"]]
-        #print(tokenizer_output.tokens)
-        # example of tokenizer_output ->
-        # Encoding(num_tokens=77, attributes=[ids, type_ids, tokens, offsets, attention_mask, special_tokens_mask, overflowing])
         
         if not self.en_roberta:
             bert_tokens = tokenizer_output.ids

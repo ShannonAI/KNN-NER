@@ -70,9 +70,6 @@ class Datastore(pl.LightningModule):
         batch_size, seq_len = input_ids.shape
         pinyin_ids = pinyin_ids.view(batch_size, seq_len, 8)
         model_output = self.forward(input_ids=input_ids, pinyin_ids=pinyin_ids,)    # [bsz, sent_len, feature_size]
-        #print("=======")
-        #print(model_output.hidden_states)
-        #print("=======")
         # [bsz, sent_len, feature_size], [bsz, sent_len], [bsz, sent_len]
         return {"features": model_output.hidden_states[-1], "labels": gold_labels, "mask": sequence_mask}
 
