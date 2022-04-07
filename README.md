@@ -1,6 +1,6 @@
 # kNN-NER: Named Entity Recognition with Nearest Neighbor Search
 
-The repository contains the code of the recent research advances in [Shannon.AI]().
+The repository contains the code of the recent research [KNN-NER](https://arxiv.org/abs/2203.17103).
 
 **kNN-NER: Named Entity Recognition with Nearest Neighbor Search**
 
@@ -8,6 +8,12 @@ Shuhe Wang, Xiaoya Li, Yuxian Meng, Rongbin Ouyang, Jiwei Li, Guoyin Wang
 
 If you find this repo helpful, please cite the following:
 ```
+@article{wang2022k,
+  title={$ k $ NN-NER: Named Entity Recognition with Nearest Neighbor Search},
+  author={Wang, Shuhe and Li, Xiaoya and Meng, Yuxian and Zhang, Tianwei and Ouyang, Rongbin and Li, Jiwei and Wang, Guoyin},
+  journal={arXiv preprint arXiv:2203.17103},
+  year={2022}
+}
 ```
 
 ## Requirements
